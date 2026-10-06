@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/circle">Circle</a></li>
+      </ul>
+    </nav>
+    <h2>I am Triangle Page.</h2>
+    <div>
+      <form
+        action="/triangle"
+        method="post"
+        style="display: flex; flex-direction: column; gap: 1rem"
+      >
+        <div>
+          <label for="height">height : </label>
+          <input
+            type="text"
+            inputmode="numeric"
+            name="height"
+            id="height"
+            placeholder="Enter the height of your triangle."
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            style="width: 13.5rem; margin-left: 1.2rem"
+          />
+        </div>
+        <div>
+          <label for="width">width : </label>
+          <input
+            type="text"
+            name="width"
+            id="width"
+            inputmode="numeric"
+            placeholder="Enter the width of your triangle."
+            oninput="th.value = this.value.replace(/[^0-9]/g, '')"
+            style="width: 13.5rem; margin-left: 1.05rem"
+          />
+        </div>
+        <div>
+          <label for="sideC">sideC : </label>
+          <input
+            type="text"
+            name="sideC"
+            id="sideC"
+            placeholder="Enter the sideC of your triangle."
+            inputmode="numeric"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            style="width: 13.5rem"
+          />
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 1rem">
+          <button type="submit">Calculate</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

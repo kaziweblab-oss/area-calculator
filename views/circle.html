@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/triangle">Triangle</a></li>
+      </ul>
+    </nav>
+    <h2>I am Circle Page.</h2>
+    <div>
+      <form
+        action="/circle"
+        method="post"
+        style="display: flex; flex-direction: column; gap: 1rem"
+      >
+        <div>
+          <label for="ratio">Circle Ratio : </label>
+          <input
+            type="text"
+            inputmode="numeric"
+            name="ratio"
+            id="ratio"
+            placeholder="Enter ratio of your circle"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 1rem">
+          <button type="submit">Calculate</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
